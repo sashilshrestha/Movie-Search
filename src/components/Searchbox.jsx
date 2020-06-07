@@ -1,13 +1,21 @@
 import React from "react";
 
 const Searchbox = () => {
+  const searchMovies = async () => {
+      
+  };
   return (
     <>
-      <form className=" ">
-        <label className="" htmlFor="Query">
-          Movie Name
-        </label>
-        <input type="text" className="input" />
+      <form className="form" onSubmit={searchMovies}>
+        <input
+          type="text"
+          className="input"
+          name="query"
+          placeholder="Enter Movie Name"
+        />
+        <button className="button" type="submit">
+          Search
+        </button>
       </form>
     </>
   );
