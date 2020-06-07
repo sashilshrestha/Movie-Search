@@ -2,9 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgba(244, 244, 244);
   color: #333;
-  font-size: 10px;
 }
 
 p {
@@ -64,10 +62,56 @@ form {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-@media (min-width: 768px) {
-  .form {
-    grid-template-columns: auto 1fr auto;
-    grid-gap: 1rem;
-    align-items: center;
+@media (max-width: 768px) {
+  .cardlist {
+    grid-template-columns: repeat(auto-fill, 100px);
   }
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  width: 250px;
+}
+
+.card-content {
+  background-color: white;
+  color: black;
+
+  padding: 1rem 2rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+}
+
+.cardlist {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 2rem; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-desc {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 1.3rem;
+}
+
+.all-movies {
+}
+
+img {
+  height: 16rem;
+  object-fit: contain;
 }
